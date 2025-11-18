@@ -14,4 +14,14 @@
 
 # Ideally, I want the program to take the measurements the user is putting in and figure out how many calories it has
 
-import requests
+import requests as req
+from bs4 import BeautifulSoup as bs
+import PyQt5 as gui
+
+def main():
+    response = req.get("https://tools.myfooddata.com/nutrition-facts/171477/100g/1")
+    print(response.text)
+
+
+if __name__ == "__main__":
+    main()
