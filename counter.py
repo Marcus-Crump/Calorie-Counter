@@ -32,8 +32,6 @@ def get_item_URL(food_split):
     link = soup.find("a", class_="searchlink")
     return link.text.strip()
     
-
-
 def get_food_data(food):
     item_URL = get_item_URL(food.split())
     item_URL = item_URL[:len(item_URL)-3] + "100g/1"
@@ -45,6 +43,7 @@ def main():
     foods = ["roast chicken","fusilli", "unsalted butter", "olive oil", "dried basil", "dried oregano"]
     for item in foods:
         print(get_food_data(item))
+
 
 
 if __name__ == "__main__":
